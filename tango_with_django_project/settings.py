@@ -17,6 +17,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # using 'os.path.join()' function ensures that the correct slashes are used depending on your OS.
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
+# Add static path
+STATIC_PATH = os.path.join(BASE_DIR, 'static')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -88,7 +91,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
 #add template directory
 
 TEMPLATE_DIRS = (
@@ -99,5 +101,10 @@ TEMPLATE_DIRS = (
     TEMPLATE_PATH,
 )
 
+# Add static files directory
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
 
 
