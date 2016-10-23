@@ -10,7 +10,7 @@ def index(request):
     return render(request, 'rango/index.html', context_dict)
 
 def about(request):
-    backToIndex = "<br/> <a href='/rango/'>Index</a>"
-    return HttpResponse("Rango says here is the about page %s" % backToIndex)
+    context_dict = {'boldmessage': "This Page is ..."}
+    return render(request, 'rango/about.html', context_dict)
 
 

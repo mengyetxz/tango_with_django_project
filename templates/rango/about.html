@@ -1,0 +1,21 @@
+<!doctype html>
+
+{% load staticfiles %}
+
+<html>
+
+    <head>
+        <title>About</title>
+    </head>
+
+    <body>
+        <h1>This is the About page.</h1>
+        Welcom to the about page.<br />
+        <strong>{{ boldmessage }}</strong><br />
+        <img scr="{% static "media/about.jpg" %}" alt="Picture of About" /><br />
+        <a href="/rango/">About</a><br />
+    </body>
+
+</html>
+
+
