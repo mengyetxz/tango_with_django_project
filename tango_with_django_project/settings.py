@@ -107,4 +107,10 @@ STATICFILES_DIRS = (
     STATIC_PATH,
 )
 
+# Add media directory
+
+MEDIA_URL = '/media/' # usr uploaded files will be available from tht URL http://0.0.0.0:port/media/.
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # tell Django where uploaded files should be stored on your local disk.
+
 
