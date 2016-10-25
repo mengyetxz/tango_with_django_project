@@ -36,11 +36,11 @@ def populate():
 
     frame_cat = add_cat("Other Frameworks")
 
-    add_page(cat=python_cat,
+    add_page(cat=frame_cat,
         title="Bottle",
         url="http://www.bottlepy.org/docs/dev/")
 
-    add_page(cat=python_cat,
+    add_page(cat=frame_cat,
         title="Flask",
         url="http://flask.pocoo.org/")
 
@@ -49,8 +49,8 @@ def populate():
         for p in Page.objects.filter(category=c):
             print "- {0} - {1}".format(str(c), str(p))
 
-def add_page(cat, title, url, view=0):
-    p = Page.objects.get_or_create(category=cat, title=title)[0]
+def add_page(cat, title, url, views=0):
+    p = Page.objects.get_or_create(category=cat, title=title)[0] # Creating model instances. Use get_or_create() method to check if the entry exists in the db for us. If it doesn't exist, the method create it and return a tuple of (object, created). The first element object is a referrence to the model instance that the create() method creates if the db entry was not found. created is a boolean value; true is returned if get_or_create() had to create a model instance.
     p.url=url
     p.views=views
     p.save()
